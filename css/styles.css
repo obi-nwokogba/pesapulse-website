@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: rgb(29, 29, 29);
     color: rgb(106, 153, 255);
     width: 100%;
     text-align: center;
@@ -10,11 +10,57 @@ body {
     width: 300px;
     margin: 0 auto;
     display: block;
+    margin-bottom: -40px;
 }
 
+.tagline {
+    line-height: 0.5px;
+    margin-top: -30px;
+    opacity: 0.6;
+    font-weight: 200;
+}
 
+.trendingCryptoBox {
+    border: dotted 1px #5d98ff;
+    display: inline-block;
+    margin: 5px;
+    width: 150px;
+    padding: 10px;
+    display: flexbox;
+}
+
+.trendingCryptoContainer {
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+    display: block;
+}
 
 .mainContainer {
     padding: 50px;
-    display: block;
+    width: 100%;
 }
+
+h2 {
+    text-align: left;
+    border-bottom: solid 3px #5d98ff51;
+    max-width: 700px;
+}
+
+/* FIRST Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 575px) {}
+
+/* SECONDSmall devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* THIRD // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* FOURTH // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* FIFTH // X-Large devices (large desktops, 1400px and up) */
+@media (min-width: 1400px) {}
+
+/* SIXTH // XX-Large devices (larger desktops, 2000px and up) */
+@media (min-width: 2000px) {}

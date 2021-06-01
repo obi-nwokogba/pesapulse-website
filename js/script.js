@@ -10,15 +10,29 @@ function loadTrendingCryptos() {
     let tendingCryptoName, trendingCryptoSymbol, trendingCryptoCoinID, trendingCryptoPriceBTC,
         trendingCryptoMarketCapRank;
 
+    let trendingCryptosHTML = `<h2>7 Most Popular Cryptocurrencies Today</h2>
+    <br /><div class="trendingCryptoContainer">`;
+
     $.ajax({
             url: `${BASE_URL}/${URL_TRENDING}`
         })
         .then(
             function (returnedData) {
-                let trendingCryptoName = returnedData.coins[0].item.name;
-                let trendingCryptoSymbol = returnedData.coins[0].item.symbol;
-                let trendingCryptoMarketCapRank = returnedData.coins[0].item.symbol;
-                $mainContainer.html(cryptoDisplay);
+
+                let trendingSevenCryptos = returnedData;
+
+                for (i = 0; i < returnedData.coins.length; i++) {
+                    let trendingCryptoName = returnedData.coins[i].item.name;
+                    let trendingCryptoSymbol = returnedData.coins[i].item.symbol;
+                    let trendingCryptoMarketCapRank = returnedData.coins[i].item.market_cap_rank;
+
+                    trendingCryptosHTML = trendingCryptosHTML + 
+                    `<div class="trendingCryptoBox"> ${trendingCryptoName} &middot; ${trendingCryptoSymbol}
+                    <h1>${trendingCryptoMarketCapRank}</h1>
+                    </div>`;
+                }
+
+                $mainContainer.html(`${trendingCryptosHTML}`);
             },
             function (error) {
                 console.log("bad request: ", error);
