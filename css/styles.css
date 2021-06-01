@@ -6,6 +6,14 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+footer{
+    text-align: left;
+    padding:10px;
+    background:black;
+    opacity:0.5;
+    font-size:0.85em;
+}
+
 #mainLogo {
     width: 300px;
     margin: 0 auto;
