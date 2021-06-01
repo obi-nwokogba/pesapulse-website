@@ -1,0 +1,2 @@
+ - When the markets are closed, have the prices greyed out.
+- have a night/day theme.

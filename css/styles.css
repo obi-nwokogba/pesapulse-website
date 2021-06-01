@@ -1,0 +1,20 @@
+body {
+    background-color: black;
+    color: rgb(106, 153, 255);
+    width: 100%;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#mainLogo {
+    width: 300px;
+    margin: 0 auto;
+    display: block;
+}
+
+
+
+.mainContainer {
+    padding: 50px;
+    display: block;
+}
